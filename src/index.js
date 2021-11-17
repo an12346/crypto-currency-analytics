@@ -13,7 +13,7 @@ $(document).ready(function() {
       const body = JSON.parse(response);
       console.log(body);
       for(let i=0; i<10; i++) {
-        $('#currencies').append("<p>" + `${body[i].name}` + "</p>");
+        $('#currencies').append(`<li>${body[i].name}</li>`);
       }
     }, function(error) {
       $('#errors').text(`There was an error processing your request: ${error}`);
