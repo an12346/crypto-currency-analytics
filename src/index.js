@@ -32,19 +32,22 @@ $(document).ready(function() {
       const input = $('#input').val();
       const inputCurrency = $('#inputCurrency').val();
       const outputCurrency = $('#outputCurrency').val();
+      let inputPrice = '';
+      let outputPrice = '';
+      let output = '';
       for(let i=0; i<body2.length; i++) {
         if(inputCurrency === `${body2[i].name}`) {
-          const inputPrice = `${body2[i].price}`;
-          for(let i=0; i<body2.length; i++) {
-            if(outputCurrency === `${body2[i].name}`) {
-              const outputPrice = `${body2[i].price}`;
-              const output = (inputPrice / outputPrice) * input;
-              $("#showExchange").append(output);
-              console.log(output);
-            }
-          }
+          inputPrice = `${body2[i].price}`;
         }
       }
+      for(let i=0; i<body2.length; i++) {
+        if(outputCurrency === `${body2[i].name}`) {
+          outputPrice = `${body2[i].price}`;
+        }
+      }
+      output = (inputPrice / outputPrice) * input;
+      $("#showExchange").append(output);
+      console.log(output);
     });
   });
 });
