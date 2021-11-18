@@ -14,4 +14,5 @@ export default class Crypto {
       request.send();
     });
   }
+
 }

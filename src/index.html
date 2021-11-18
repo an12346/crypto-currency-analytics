@@ -6,8 +6,19 @@
 
 <body>
   <h1>Crypto Currency Analyzer</h1>
-  <button class="btn-success" id="list-currencies" value="currencies/ticker">List Top Ten Currencies</button>
-  <button class="btn-success" id="price" value="currencies/ticker">List Prices</button>
+  <input type="number" id="input" placeholder="Enter a Number">
+  <div>
+    <input type="text" id="inputCurrency" placeholder="Enter First Currency">
+  </div>
+  <div>
+    <input type="text" id="outputCurrency" placeholder="Enter Second Currency">
+  </div>
+  <div>
+    <button class="btn btn-warning" id="exchange">Submit</button>
+  </div>
+  <div id="showExchange"></div>
+  <button class="btn-success" id="list-currencies">List Top Ten Currencies</button>
+  <button class="btn-success" id="price">List Prices</button>
   <ol id="currencies"></ol>
   <div id="errors"></div>
 </body>
