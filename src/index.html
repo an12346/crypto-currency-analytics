@@ -5,18 +5,27 @@
 </head>
 
 <body>
-  <h1>Crypto Currency Analyzer</h1>
-  <input type="number" id="input" placeholder="Enter a Number">
-  <div>
-    <input type="text" id="inputCurrency" placeholder="Enter First Currency">
+  <div id="top">
+    <h1>Crypto Currency Analyzer</h1>
+    <input type="number" id="input" placeholder="Enter a Number" min="0">
+    <div>
+      <input type="text" id="inputCurrency" placeholder="Enter First Currency">
+    </div>
+    <div>
+      <input type="text" id="outputCurrency" placeholder="Enter Second Currency">
+    </div>
+    <div>
+      <button class="btn btn-warning" id="exchange">Submit</button>
+    </div>
+    <div id="showExchange">
+      <p>Here's your conversion:</p> 
+    </div>
+    <div class="container">  
+      <div id="showConversion">
+        <h3><span id="inputSpan"></span> <span id="inputCurrencySpan"></span> is equivalent to <span id="outputSpan"></span> <span id="outputCurrencySpan"></span></h3>
+      </div>
+    </div>
   </div>
-  <div>
-    <input type="text" id="outputCurrency" placeholder="Enter Second Currency">
-  </div>
-  <div>
-    <button class="btn btn-warning" id="exchange">Submit</button>
-  </div>
-  <div id="showExchange"></div>
   <button class="btn-success" id="list-currencies">List Top Ten Currencies</button>
   <button class="btn-success" id="price">List Prices</button>
   <ol id="currencies"></ol>

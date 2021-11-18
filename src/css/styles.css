@@ -1,3 +1,40 @@
 ol {
   margin-left: 25px;
 }
+
+#showExchange {
+  display: none;
+}
+
+#top {
+  text-align: center;
+}
+
+#input {
+  margin: 5px;
+}
+
+#inputCurrency {
+  margin: 5px;
+}
+
+#outputCurrency {
+  margin: 5px;
+}
+
+#exchange {
+  margin: 5px;
+}
+
+#showExchange {
+  margin: 5px;
+}
+
+#showConversion {
+  display: none;
+}
+
+h3 {
+  background-color: rgb(252, 124, 252);
+  border: rgb(252, 124, 252) 5px;
+}

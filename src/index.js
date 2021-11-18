@@ -12,10 +12,10 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       for(let i=0; i<body.length; i++) {
-        $('#currencies').append(`<li>${body[i].name}<span></span></li>`);
+        $('#currencies').append(`<li>${body[i].name}<span id="list"></span></li>`);
       }
       $('#price').click(function() {
-        $("span").each(function(i) {
+        $("span#list").each(function(i) {
           let roundedPrice = Math.round(`${body[i].price}` * 100) / 100;          
           roundedPrice = roundedPrice.toLocaleString();
           this.append(` - Price: $` + roundedPrice + ` USD`);        
@@ -46,8 +46,13 @@ $(document).ready(function() {
         }
       }
       output = (inputPrice / outputPrice) * input;
-      $("#showExchange").append(output);
-      console.log(output);
+      output = Math.round(output * 10000) / 10000;
+      $('#showExchange').show();
+      $('#showConversion').show();
+      $('#inputSpan').text(input);
+      $('#inputCurrencySpan').text(inputCurrency);
+      $('#outputSpan').text(output);
+      $('#outputCurrencySpan').text(outputCurrency);
     });
   });
 });
